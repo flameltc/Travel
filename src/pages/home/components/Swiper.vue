@@ -20,10 +20,16 @@ export default {
       },
       swiperList: [{
         ID: '001',
-        imgURL: 'https://imgs.qunarzz.com/vc/c4/38/76/284d1c5cd02b88a4cd7247b8e3.jpg_92.jpg'
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1809/3b/7b654a05c9b61e02.jpg_750x200_eb04c4da.jpg'
       }, {
         ID: '002',
-        imgURL: 'https://imgs.qunarzz.com/ftejia/1808/4a/2c3df86d3fc9ae.jpg'
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1809/6a/847ac7b98f10e202.jpg_750x200_f0593cb5.jpg'
+      }, {
+        ID: '003',
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1809/f0/b39b64c33a62e002.jpg_750x200_3e961ce7.jpg'
+      }, {
+        ID: '004',
+        imgURL: 'http://img1.qunarzz.com/piao/fusion/1809/86/deb33800de224c02.jpg_750x200_74fb795e.jpg'
       }]
     }
   }
@@ -32,11 +38,11 @@ export default {
 
 <style lang="stylus" scoped>
   .wrapper >>> .swiper-pagination-bullet-active
-    background: #fff
+    background: #fff !important
   .wrapper
     width: 100%
-    height: 25vw
-    // overflow: hidden
+    height: 27vw
+    overflow: hidden
     // padding-bottom: 38%
     background: #eee
     .bg-swiper
