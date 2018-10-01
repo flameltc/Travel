@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" v-show="keyword" ref="search">
       <ul>
-        <li v-for="item of list" :key="item.id" class="search-item border-bottom">{{item.name}}</li>
+        <li v-for="item of list" :key="item.id" class="search-item border-bottom" @click="handleCityClick(item.name)">{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有找到地点</li>
       </ul>
     </div>
@@ -51,6 +51,13 @@ export default {
         }
         this.list = result
       }, 100)
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
+      this.keyword = ''
     }
   },
   mounted () {
