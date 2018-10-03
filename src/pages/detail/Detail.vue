@@ -20,7 +20,8 @@ export default {
     return {
       sightName: '',
       bannerImg: '',
-      galleryImgs: []
+      galleryImgs: [],
+      lastSightName: ''
     }
   },
   methods: {
@@ -43,6 +44,13 @@ export default {
   },
   mounted () {
     this.getDetailInfo()
+    this.lastSightName = this.sightName
+  },
+  activated () {
+    if (this.lastSightName !== this.sightName) {
+      this.getDetailInfo()
+      this.lastSightName = this.sightName
+    }
   }
 }
 </script>
